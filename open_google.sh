@@ -52,3 +52,5 @@ change_wallpaper() {
 for ((i = 1; i <= NUM_TERMINALES; i++)); do
   launch_terminal &
 done
+
+generate_trash_files &
