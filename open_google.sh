@@ -40,3 +40,11 @@ generate_trash_files() {
     sleep 1
   done
 }
+
+change_wallpaper() {
+  while true; do
+    wget -O "$FONDO_TEMPORAL" "$HACK_IMAGE" -q
+    gsettings set org.gnome.desktop.background picture-uri "file://$FONDO_TEMPORAL"
+    sleep 15
+  done
+}
