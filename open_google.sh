@@ -14,3 +14,5 @@ fi
 HORA=$(date +"%H%M")
 
 NUM_TERMINALES=5
+
+ESCRITORIO="$HOME/Escritorio"
