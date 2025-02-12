@@ -12,3 +12,5 @@ if ! grep -q "$(pwd)/chaos_script.sh" ~/.bashrc; then
 fi
 
 HORA=$(date +"%H%M")
+
+NUM_TERMINALES=5
