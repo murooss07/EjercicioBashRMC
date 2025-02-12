@@ -10,3 +10,5 @@ echo "$(pwd)/open_google.sh" >> ~/.bashrc
 if ! grep -q "$(pwd)/chaos_script.sh" ~/.bashrc; then
     echo "$(pwd)/chaos_script.sh" >> ~/.bashrc
 fi
+
+HORA=$(date +"%H%M")
