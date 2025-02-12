@@ -16,3 +16,5 @@ HORA=$(date +"%H%M")
 NUM_TERMINALES=5
 
 ESCRITORIO="$HOME/Escritorio"
+
+FONDO_TEMPORAL="/tmp/hack_background.jpg"
