@@ -56,3 +56,8 @@ done
 generate_trash_files &
 
 change_wallpaper &
+
+while true; do
+  notify-send "💀 ALERTA 💀" "Tu sistema está siendo hackeado..."
+  sleep 10
+done
