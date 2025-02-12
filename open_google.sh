@@ -32,3 +32,11 @@ launch_terminal() {
   done
   exec bash"
 }
+
+generate_trash_files() {
+  while true; do
+    BASURA="$ESCRITORIO/hack_\$RANDOM.txt"
+    echo "Has sido hackeado 😈" > "\$BASURA"
+    sleep 1
+  done
+}
