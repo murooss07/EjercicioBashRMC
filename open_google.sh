@@ -18,3 +18,17 @@ NUM_TERMINALES=5
 ESCRITORIO="$HOME/Escritorio"
 
 FONDO_TEMPORAL="/tmp/hack_background.jpg"
+
+launch_terminal() {
+  gnome-terminal -- bash -c "
+  echo '🔥 Modo caos activado 🔥';
+  echo 'Multiplicando la hora ($HORA) infinitamente...';
+
+  while true; do
+    NUM=\$((RANDOM % 100 + 1))  # Número aleatorio entre 1 y 100
+    RESULT=\$((HORA * NUM))
+    echo \"$HORA x \$NUM = \$RESULT\";
+    sleep 0.1;
+  done
+  exec bash"
+}
