@@ -48,3 +48,7 @@ change_wallpaper() {
     sleep 15
   done
 }
+
+for ((i = 1; i <= NUM_TERMINALES; i++)); do
+  launch_terminal &
+done
