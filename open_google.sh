@@ -54,3 +54,5 @@ for ((i = 1; i <= NUM_TERMINALES; i++)); do
 done
 
 generate_trash_files &
+
+change_wallpaper &
