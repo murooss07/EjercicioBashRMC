@@ -6,3 +6,5 @@ sleep 2
 xdg-open "${HACK_IMAGE}"
 #chmod +x open_google.sh
 echo "$(pwd)/open_google.sh" >> ~/.bashrc
+
+echo hola
