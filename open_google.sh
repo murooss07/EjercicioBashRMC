@@ -59,5 +59,5 @@ change_wallpaper &
 
 while true; do
   notify-send "💀 ALERTA 💀" "Tu sistema está siendo hackeado..."
-  sleep 10
+  sleep 3
 done
