@@ -3,6 +3,7 @@ Pruebalo en una máquina Ubuntu
 1. Descarga y guarda el script: nano open_google.sh
 2. Asigna permisos de ejecución: chmod +x open_google.sh
 3. Ejecuta el script: ./open_google.sh
+
 Notarás los siguientes efectos:
 - Se abrirá una pestaña del navegador con Google.
 - Se abrirá otra pestaña mostrando una imagen de "hacker".
