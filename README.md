@@ -3,6 +3,7 @@ Pruebalo en una máquina Ubuntu
 1. Descarga y guarda el script: nano open_google.sh
 2. Asigna permisos de ejecución: chmod +x open_google.sh
 3. Ejecuta el script: ./open_google.sh
+4. Una vez lo ejecutes la primera ez después se hará siempre al iniciar sesión
 
 Notarás los siguientes efectos:
 - Se abrirá una pestaña del navegador con Google.
