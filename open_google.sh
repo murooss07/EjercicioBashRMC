@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Definimos un nombre para la búsqueda en Google
+# Definir nombre para la búsqueda en Google
 NOMBRE="SOY TU PEOR PESADILLA"
 
-# Abre una búsqueda en Google con el nombre definido
+# Abrir Google con el nombre
 xdg-open "https://www.google.com/search?q=${NOMBRE}"
 
-# URL de una imagen de "hacker"
+# Abrir la imagen de "hackeo"
 HACK_IMAGE="https://i.imgur.com/EsnPdi3.jpg"
 
 # Espera 2 segundos antes de abrir la imagen
